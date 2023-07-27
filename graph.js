@@ -306,5 +306,20 @@ class graph{
             this.adjList[vertex] = new Set()
         }
     }
-    
+    addEdge(vertex1,vertex2){
+        if (!this.adjList[vertex1]) {
+            this.adjList(vertex1)
+        }
+        if(!this.adjList[vertex2]){
+            this.adjList(vertex2)
+        }
+        this.adjList[vertex1].add(vertex2)
+        this.adjList[vertex2].add(vertex1)
+    }
+    hasEdge(){
+        return(
+            this.adjList[vertex1].add(vertex2)&&
+            this.adjList[vertex2].add(vertex1)
+        )
+    }
 }

@@ -199,25 +199,22 @@
 // }
 // console.log(quicksort([9,8,7,6,5,4,3,2,1]));
 
-// function quicksort(array) {
+function quicksort(array) {
 
-// if (array.length<=1) {
-//   return array
-// }
-//   let left = []
-//   let right= []
-//   let pivot=array[0]
-//   for (let i = 1; i < array.length; i++) {
-//        if (array[i],pivot) {
-//         left.push(array[i])
-//        }else{
-//         right.push(array[i])
-//        }
-
-    
-//   }
-//   return [...quicksort(left),pivot,...quicksort(right)]
-// }
-
-// console.log(quicksort([9,8,7,6,5,4,4,3,2,1]));
+if (array.length<=1) {
+  return array
+}
+  let left = []
+  let right= []
+  let pivot=array[0]
+  for (let i = 1; i < array.length; i++) {
+       if (array[i],pivot) {
+        left.push(array[i])
+       }else{
+        right.push(array[i])
+       }
+  }
+  return [...quicksort(left),pivot,...quicksort(right)]
+}
+console.log(quicksort([9,8,7,6,5,4,4,3,2,1]));
 
