@@ -310,25 +310,63 @@ console.log( selectionSort([8,7,6,5,4,3,2]));*/
 
 
 
-function selectionSort(array) {
+// function selectionSort(array) {
+//     for (let i = 0; i < array.length; i++) {    
+//         let minValue = array[i]
+//         let minIndex = i
+//         for (let j = i+1; j < array.length; j++) {
+//              if (array[j]<minValue) {
+//                 minValue = array[j]
+//                 minIndex=j
+//              } 
+//         }
+//         if (minIndex!==i) {
+//             array[minIndex ]= array[i]
+//             array[i]=minValue
+//         }
+//     }
+//     return array
+// }
+// console.log(selectionSort([8,33,55,3,2,1]));
+
+// function selectionSort(array) {
     
-    for (let i = 0; i < array.length; i++) {
-         
-        let minValue = array[i]
-        let minIndex = i
-        for (let j = i+1; j < array.length; j++) {
-             if (array[j]<minValue) {
-                minValue = array[j]
-                minIndex=j
-             }
+//     for (let i = 0; i < array.length; i++) {
+//          let minIndex= i
+//          let minValue = array[i]
+//          for (let j = i+1; j < array.length; j++) {
+//              if (array[j]<minValue) {
+//                 minValue= array[j]
+//                 minIndex = j
+//              }
             
-        }
-        if (minIndex!==i) {
-            array[minIndex ]= array[i]
-            array[i]=minValue
-        }
-        
-    }
-    return array
-}
-console.log(selectionSort([8,33,55,3,2,1]));
+//          }
+//         if (minIndex!==i) {
+//             array[minIndex] = array[i]
+//             array[i] = minValue
+//         }
+//     }
+//     return array
+// }
+
+// console.log(selectionSort([9,8,7,6,5,4,2]));
+
+
+// function selectionSort(array) {
+//     for (let i = 0; i < array.length; i++) {
+//        let minIndex = i 
+//        let minValue = array[i]
+//        for (let j = i+1; j < array.length; j++) {
+//              if (array[j]<minValue) {
+//                 minIndex = j
+//                 minValue = array[j]
+//              }
+//        }
+//        if (minIndex!==i) {
+//          array[minIndex]= array[i]
+//            array[i] = minValue
+//         }
+//     }
+//     return array
+// }
+// console.log( selectionSort([9,8,7,6,5,4,3,2]));

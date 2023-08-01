@@ -257,20 +257,38 @@
 // }
 // console.log(insertionSort([9,8,7,6,5,4,3,2,1]));
 
-function insertionSort(array) {
+// function insertionSort(array) {
     
-    for (let i = 1; i < array.length; i++) {
+//     for (let i = 1; i < array.length; i++) {
         
-        let current = array[i]
-        let  j=i-1
-        while (j>=0&&array[j]>current) {
-            array[j+1]=array[j]
+//         let current = array[i]
+//         let  j=i-1
+//         while (j>=0&&array[j]>current) {
+//             array[j+1]=array[j]
+//             j--
+//         }
+//         array[j+1]=current
+        
+//     }
+//     return array
+// }
+
+// console.log(insertionSort([9,8,-11,4,]));
+
+
+
+function insertion(array) {
+    for (let i = 0; i < array.length; i++) {
+         let current = array[i]
+         let j= i-1
+           while (j>=0&& array[j]>current) {
+
+            array[j+1]= array[j]
             j--
-        }
-        array[j+1]=current
-        
+            
+           }        
+           array[j+1] = current
     }
     return array
 }
-
-console.log(insertionSort([9,8,-11,4,]));
+console.log(insertion([9,8,7,6,5,4,3,2]));
