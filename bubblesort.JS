@@ -290,19 +290,24 @@
 // console.log(bubblesort([8,7,6,5,4,319,0,2,3,5]));
 
 
-function bubblesort(array) {
-   let swapped 
-   do {
-      swapped= false
-      for (let i = 0; i < array.length; i++) {   
-         if (array[i+1]<array[i]) {
-            let temp = array[i]
-            array[i] = array[i+1]
-            array[i+1]=temp 
-            swapped = true
-         }      
-      }
-   } while (swapped);
-  return array
+// function bubblesort(array) {
+//    let swapped 
+//    do {
+//       swapped= false
+//       for (let i = 0; i < array.length; i++) {   
+//          if (array[i+1]<array[i]) {
+//             let temp = array[i]
+//             array[i] = array[i+1]
+//             array[i+1]=temp 
+//             swapped = true
+//          }      
+//       }
+//    } while (swapped);
+//   return array
+// }
+// console.log(bubblesort([9,8,7,6,5,4,3,2,1]));
+
+
+function bubblesort(params) {
+   
 }
-console.log(bubblesort([9,8,7,6,5,4,3,2,1]));
