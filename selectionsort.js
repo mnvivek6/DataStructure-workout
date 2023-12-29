@@ -373,23 +373,48 @@ console.log( selectionSort([8,7,6,5,4,3,2]));*/
 
 
 
-function selectionSort(array) {
-    for (let i = 0; i < array.length; i++) {
-         let minIndex =i
-         let minValue = array[i]
-         for (let j = i+1; j < array.length; j++) {
-            if (array[j]<minValue) {
-                minIndex = j
-                minValue = array[j]
+// function selectionSort(array) {
+//     for (let i = 0; i < array.length; i++) {
+//          let minIndex =i
+//          let minValue = array[i]
+//          for (let j = i+1; j < array.length; j++) {
+//             if (array[j]<minValue) {
+//                 minIndex = j
+//                 minValue = array[j]
 
-            }
-         }
-        if(minIndex!==i){
-            array[minIndex]= array[i]
-            array[i]= minValue
-        }
-    }
-    return array
-}
+//             }
+//          }
+//         if(minIndex!==i){
+//             array[minIndex]= array[i]
+//             array[i]= minValue
+//         }
+//     }
+//     return array
+// }
 
-console.log(selectionSort(1,10,3,8,5,2,1))
+// console.log(selectionSort([1,10,3,8,5,2,1]))
+
+
+// function selectionSort(array){
+//     for (let i = 0; i < array.length; i++) {
+//          let minIndex = i
+//          let minValue = array[i]
+//          for (let j = i+1; j < array.length; j++) {
+//             if (array[j]<minValue) {
+//                 minIndex=j
+//                 minValue=array[j]
+//             }
+            
+//          }
+//          if (minIndex!==i) {
+//             array[minIndex]= array[i]
+//             array[i]= minValue
+//          }
+        
+//     }
+//     return array
+// }
+
+// console.log(selectionSort([9,8,6,4,3,2,]));
+
+

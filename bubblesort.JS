@@ -308,6 +308,25 @@
 // console.log(bubblesort([9,8,7,6,5,4,3,2,1]));
 
 
-function bubblesort(params) {
+function bubbleSort(array) {
+
+    let swapped
+    do{
+        swapped=false
    
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i+1]<array[i]) {
+            let temp = array[i]
+            array[i]= array[i+1]
+            array[i+1]=temp
+           swapped= true
+        }
+        
+    }
+}while (swapped)
+
+return array
 }
+
+console.log(bubbleSort([8,7,6,5,432,9,1]));
