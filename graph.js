@@ -255,8 +255,10 @@
 // graph.addVertex('B')
 // graph.addVertex('C')
 // graph.addVertex('D')
+// graph.addEdge('A','D')
 // graph.addEdge('A','B')
 // graph.addEdge('D','C')
+// graph.addEdge('C','F')
 // graph.removeEdge('A','B')
 // graph.removeEdge('D','C')
 // graph.removeVertex("A")
@@ -297,29 +299,87 @@
 // }
 
 
-class graph{
+// class graph{
+//     constructor(){
+//         this.adjList = {
+
+//         }
+//     }
+//     addVertex(vertex){
+//         if (!this.adjList[vertex]) {
+//             this.adjList[vertex] = new Set()
+//         }
+//     }
+//     addEdge(vertex1,vertex2){
+//         if (!this.adjList[vertex1]) {
+//             this.adjList(vertex1)
+//         }
+//         if(!this.adjList[vertex2]){
+//             this.adjList(vertex2)
+//         }
+//         this.adjList[vertex1].add(vertex2)
+//         this.adjList[vertex2].add(vertex1)
+//     }
+//     hasEdge(){
+//         return(
+//             this.adjList[vertex1].add(vertex2)&&
+//             this.adjList[vertex2].add(vertex1)
+//         )
+//     }
+// }
+
+
+
+
+// class graph{
+//     constructor(){
+//         this.adjList={}
+//     }
+//     addVertext(vertex){
+//         if (!this.adjList[vertex]) {
+//             this.adjList(vertex)
+//         }
+//     }
+//     addEdge(vertex1,vertex2){
+//         if (!this.adjList[vertex1]) {
+//             this.adjList(vertex1)
+//         }
+//     }
+// }
+
+
+class Graph{
     constructor(){
-        this.adjList = {}
+        this.adjecencyList={}
     }
     addVertex(vertex){
-        if (!this.adjList[vertex]) {
-            this.adjList[vertex] = new Set()
+        if (!this.adjecencyList[vertex]) {
+            this.adjecencyList[vertex]= new Set
         }
     }
     addEdge(vertex1,vertex2){
-        if (!this.adjList[vertex1]) {
-            this.adjList(vertex1)
+        if (!this.adjecencyList[vertex1]) {
+            this.addVertex(vertex1)
         }
-        if(!this.adjList[vertex2]){
-            this.adjList(vertex2)
+        if (!this.adjecencyList[vertex2]) {
+            this.adjecencyList(vertex2)
         }
-        this.adjList[vertex1].add(vertex2)
-        this.adjList[vertex2].add(vertex1)
+        this.adjecencyList[vertex1].add(vertex2)
+        this.adjecencyList[vertex2].add(vertex1)
     }
-    hasEdge(){
-        return(
-            this.adjList[vertex1].add(vertex2)&&
-            this.adjList[vertex2].add(vertex1)
-        )
+    display(){
+        for (let vertex in this.adjecencyList) {
+             console.log(vertex+'->'+[...this.adjecencyList[vertex]]);
+            
+        }
     }
+
+
 }
+
+const graph = new Graph()
+graph.addVertex('a')
+graph.addVertex('b')
+graph.addVertex('c')
+graph.addEdge('a','b')
+graph.display()
