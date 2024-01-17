@@ -177,5 +177,6 @@ graph.addVertex("D")
 
 graph.addEdge("A","B")
 graph.addEdge("C","D")
+graph.addEdge("C","A")
 // graph.addEdge("A","B")
 graph.bFs("C")

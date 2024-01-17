@@ -241,6 +241,18 @@ class Graph{
         }
         delete this.adjecencyList[vertex]
     }
+    getvertexNeighbors(vertex){
+        return this.adjecencyList[vertex]
+    }
+    dfs(vertex,visited=[]){
+        visited.push(vertex)
+        this.getvertexNeighbors(vertex).forEach(neighbor=>{
+            if (!visited.includes(neighbor)) {
+                this.dfs(neighbor,visited)
+            }
+        })
+        return visited
+    }
     display(){
         for (let vertex in this.adjecencyList) {
            console.log(vertex+'->'+[...this.adjecencyList[vertex]]);
@@ -259,6 +271,7 @@ graph.addEdge('A','D')
 graph.addEdge('A','B')
 graph.addEdge('D','C')
 graph.addEdge('C','F')
+console.log(graph.dfs('A'));
 // console.log(graph.hasEdge('C','A'));
 // graph.removeEdge('A','B')
 // graph.removeEdge('D','C')

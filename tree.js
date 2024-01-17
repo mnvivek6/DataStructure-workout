@@ -765,7 +765,6 @@ class BinarySearchTree{
     delete(value){
         this.root = this.deleteNode(this.root,value)
     }
-    
     deleteNode(root,value){
         if (root==null) {
          return null   
@@ -802,19 +801,6 @@ class BinarySearchTree{
             }
         }
     }
-    
-    // validate() {
-    //     return this.validateNode(this.root, -Infinity, Infinity);
-    //   }
-    //   validateNode(root, min, max) {
-    //     if (root=== null) {
-    //       return true;
-    //     }
-    //     if (root.value <= min || root.value >= max) {
-    //       return false;
-    //     }
-    //     return this.validateNode(root.left,min,root.value) && this.validateNode(root.right,root.value,max)
-    //   }
     validate(){
         return this.validateNode(this.root,-Infinity,Infinity)
     }
